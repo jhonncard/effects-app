@@ -27,11 +27,11 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     SharedModule,
     UsuariosModule,
-    StoreModule.forRoot(appReducers),
+    StoreModule.forRoot( appReducers ),
     EffectsModule.forRoot(EffectsArray),
     StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: environment.production
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
     }),
   ],
   providers: [],

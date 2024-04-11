@@ -1,4 +1,4 @@
-import { Action, createReducer, on } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import { cargarUsuarios, cargarUsuariosError, cargarUsuariosSuccess } from '../actions';
 import { Usuario } from '../../models/usuario.model';
 
@@ -16,7 +16,7 @@ export const usuariosInitialState: UsuariosState = {
   error: null
 }
 
-const _usuariosReducer = createReducer( usuariosInitialState,
+const _usuariosReducer = createReducer(usuariosInitialState,
 
   on(cargarUsuarios, state => ({ ...state, loading: true })),
 
@@ -44,6 +44,6 @@ const _usuariosReducer = createReducer( usuariosInitialState,
 
 );
 
-export function usuariosReducer( state: UsuariosState | undefined, action: Action) {
+export function usuariosReducer( state: any, action: any) {
   return _usuariosReducer(state, action);
 }

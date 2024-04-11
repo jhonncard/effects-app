@@ -10,6 +10,12 @@ export interface Info{
     total_pages: number;
 
 }
+
+export interface InfoUsuario{
+  data: Usuario;
+  suport:Support;
+}
+
 export interface Support{
 
     text: string;
